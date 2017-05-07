@@ -165,12 +165,11 @@ public class MainActivity extends AppCompatActivity {
                             list.getLast().equals("-")||list.getLast().equals("*")) {
                         list.removeLast();
                     }
-
                     DenYu();
-
                 }
             }
         }
+        //判断当前当前是否可以输入0
         public boolean btn0Get(){
             boolean anJian=false;
             Matcher matcher = null;
@@ -192,10 +191,12 @@ public class MainActivity extends AppCompatActivity {
             }
             return anJian;
         }
+        //获取list的长度
         private int getList(){
             int list_Size=(int)list.size();
             return list_Size;
         }
+        //判断是否可以输入点
         private boolean getDian(){
             boolean get_Dian=true;
             String regEx ="[0-9]";
@@ -225,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return get_Dian;
         }
+        //返回当前输入的最近的数的长度，截止到前面最近的操作符
         private int getListInt(){
             int geti=0;
             boolean get_Dian=true;
@@ -250,6 +252,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return geti;
         }
+        //判断是否前面一个字符是操作符
         private boolean fuHao(){
             boolean fu=false;
             if(list.size()==0){
@@ -262,6 +265,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return fu;
         }
+        //显示在文本框
         public void xianShi(){
             Object ob="";
             for (Object a:list
@@ -300,6 +304,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return panDuani;
         }
+        //计算过程
         public void DenYu(){
             boolean aa=false,bb=false;
             int i=0,jzg=1;
