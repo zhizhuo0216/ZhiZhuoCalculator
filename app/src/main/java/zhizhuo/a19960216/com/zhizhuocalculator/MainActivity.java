@@ -416,7 +416,7 @@ public class MainActivity extends AppCompatActivity {
                             list1.remove(i-1);
                             qo = list1.size();
                             j--;
-                            i--;
+                            i=i-2;
                         }
                         else if (list1.get(jj).equals("/")) {
                             String ix=list1.get(i-1).toString();
@@ -430,7 +430,7 @@ public class MainActivity extends AppCompatActivity {
                             list1.remove(i-1);
                             qo = list1.size();
                             j--;
-                            i--;
+                            i=i-2;
                         }
                         qo = list1.size();
                         if (list1.size()==i+1){
