@@ -439,6 +439,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     else {
+
                         if(list1.get(jj).equals("+"))
                         {
                             String ix=list1.get(i-1).toString();
